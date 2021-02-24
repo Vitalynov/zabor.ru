@@ -1,0 +1,149 @@
+@import "Help sccs/_normalize.scss";
+@import "Help sccs/_variables.scss";
+@import "Help sccs/_mixins.scss";
+@import "Help sccs/_functions.scss";
+@import "Help sccs/_ibg.scss";
+
+//Подключение шрифтов
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap"); //Шрифт логотипа
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'PT Sans', sans-serif;
+//шрифт логотипа:
+//font-family: 'Carter One', cursive;
+
+/*Начало кода*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-width: 100%;
+}
+
+.titele-h1 {
+  //font-size: 32px;
+  @include adaptiv-font(32, 14);
+  color: #fff;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+
+  &>span {
+    color: rgb(255, 96, 5);
+  }
+
+}
+
+.titele-h2 {
+  //font-size: 32px;
+  @include adaptiv-font(32, 14);
+  //color: #444444;
+  color: rgb(255, 96, 5);
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+
+}
+
+.titele-h3 {
+  //font-size: 26px;
+  @include adaptiv-font(26, 14);
+  color: #616161;
+  font-family: "PT Sans", sans-serif;
+  //text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+}
+
+.text {
+  //font-size: 14px;
+  @include adaptiv-font(14, 12);
+  color: #868686;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.15em;
+  text-align: justify
+}
+
+.text-sub {
+  //font-size: 13px;
+  @include adaptiv-font(12, 10);
+  color: #868686;
+  font-weight: 400;
+  line-height: 130%;
+  //letter-spacing: 0.05em;
+
+}
+
+.btn {
+  display: block;
+  width: 250px;
+  color: #fff;
+  text-transform: uppercase;
+  //font-size: 16px;
+  @include adaptiv-font(16, 12);
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(255, 96, 5);
+  box-shadow: 1px 2px 20px rgba(255, 97, 5, 0.5);
+
+}
+
+.container {
+  display: block;
+  max-width: 1190px;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.clouse {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0 .8rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.5s;
+
+  @media (max-width: 360px) {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &:hover {
+    background-color: #ff6005;
+    ;
+  }
+}
+
+
+// Основные блоки
+@import "../header/header.scss";
+@import "../main/main.scss";
+@import "../footer/footer.scss";
